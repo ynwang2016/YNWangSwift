@@ -27,6 +27,9 @@
 		3D5BDA511DCBB56300F52B74 /* URLEncodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5BDA501DCBB56300F52B74 /* URLEncodeTool.swift */; };
 		3D5BDA5A1DCBED0D00F52B74 /* WeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5BDA591DCBED0D00F52B74 /* WeatherObject.swift */; };
 		3D5BDA5E1DCBFF9100F52B74 /* YNWeatherCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5BDA5D1DCBFF9100F52B74 /* YNWeatherCell1.swift */; };
+		3D714BF31DD1492900EAA60E /* YNWeatherCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D714BF21DD1492900EAA60E /* YNWeatherCell2.swift */; };
+		3D714BFA1DD264A700EAA60E /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D714BF81DD264A700EAA60E /* CollectionCell.swift */; };
+		3D714BFB1DD264A700EAA60E /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D714BF91DD264A700EAA60E /* CollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		3D5BDA501DCBB56300F52B74 /* URLEncodeTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLEncodeTool.swift; sourceTree = "<group>"; };
 		3D5BDA591DCBED0D00F52B74 /* WeatherObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherObject.swift; sourceTree = "<group>"; };
 		3D5BDA5D1DCBFF9100F52B74 /* YNWeatherCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNWeatherCell1.swift; sourceTree = "<group>"; };
+		3D714BF21DD1492900EAA60E /* YNWeatherCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNWeatherCell2.swift; sourceTree = "<group>"; };
+		3D714BF81DD264A700EAA60E /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		3D714BF91DD264A700EAA60E /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,9 @@
 			children = (
 				3D5BD9CA1DCAB8E400F52B74 /* YNWeatherCell.swift */,
 				3D5BDA5D1DCBFF9100F52B74 /* YNWeatherCell1.swift */,
+				3D714BF21DD1492900EAA60E /* YNWeatherCell2.swift */,
+				3D714BF81DD264A700EAA60E /* CollectionCell.swift */,
+				3D714BF91DD264A700EAA60E /* CollectionCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -286,13 +295,16 @@
 				TargetAttributes = {
 					3D5BD9971DCAB43600F52B74 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					3D5BD9AB1DCAB43700F52B74 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3D5BD9971DCAB43600F52B74;
 					};
 					3D5BD9B61DCAB43700F52B74 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3D5BD9971DCAB43600F52B74;
 					};
 				};
@@ -325,6 +337,7 @@
 				3D5BD9A61DCAB43700F52B74 /* LaunchScreen.storyboard in Resources */,
 				3D5BD9A31DCAB43700F52B74 /* Assets.xcassets in Resources */,
 				3D5BD9A11DCAB43700F52B74 /* Main.storyboard in Resources */,
+				3D714BFB1DD264A700EAA60E /* CollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,8 +370,10 @@
 				3D5BDA5A1DCBED0D00F52B74 /* WeatherObject.swift in Sources */,
 				3D5BDA4A1DCBA8AF00F52B74 /* AFURLConnectionOperation.m in Sources */,
 				3D5BDA491DCBA8AF00F52B74 /* AFSecurityPolicy.m in Sources */,
+				3D714BF31DD1492900EAA60E /* YNWeatherCell2.swift in Sources */,
 				3D5BDA471DCBA8AF00F52B74 /* AFHTTPSessionManager.m in Sources */,
 				3D5BDA4B1DCBA8AF00F52B74 /* AFURLRequestSerialization.m in Sources */,
+				3D714BFA1DD264A700EAA60E /* CollectionCell.swift in Sources */,
 				3D5BDA511DCBB56300F52B74 /* URLEncodeTool.swift in Sources */,
 				3D5BDA4D1DCBA8AF00F52B74 /* AFURLSessionManager.m in Sources */,
 				3D5BDA5E1DCBFF9100F52B74 /* YNWeatherCell1.swift in Sources */,
@@ -511,6 +526,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ywang.YNWangWeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YNWangWeatherApp/Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -524,6 +540,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ywang.YNWangWeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YNWangWeatherApp/Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -535,6 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ywang.YNWangWeatherAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YNWangWeatherApp.app/YNWangWeatherApp";
 			};
 			name = Debug;
@@ -547,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ywang.YNWangWeatherAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YNWangWeatherApp.app/YNWangWeatherApp";
 			};
 			name = Release;
@@ -558,6 +577,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ywang.YNWangWeatherAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = YNWangWeatherApp;
 			};
 			name = Debug;
@@ -569,6 +589,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ywang.YNWangWeatherAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = YNWangWeatherApp;
 			};
 			name = Release;
@@ -592,6 +613,7 @@
 				3D5BD9C21DCAB43700F52B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D5BD9C31DCAB43700F52B74 /* Build configuration list for PBXNativeTarget "YNWangWeatherAppTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +622,7 @@
 				3D5BD9C51DCAB43700F52B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D5BD9C61DCAB43700F52B74 /* Build configuration list for PBXNativeTarget "YNWangWeatherAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +631,7 @@
 				3D5BD9C81DCAB43700F52B74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

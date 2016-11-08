@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B2D02E102749FD5534DBB5769A77351AB3FB06A9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "1383498c-bbca-407e-bb69-684b86c5358b++9724" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1383498c-bbca-407e-bb69-684b86c5358b++9724" : 0,
+    "B2D02E102749FD5534DBB5769A77351AB3FB06A9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7C98EB53-4291-4C3C-9357-633A0CBB4D5E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1383498c-bbca-407e-bb69-684b86c5358b++9724" : "YNSwiftProject\/YNWangWeatherApp\/YNWangWeatherApp\/AFNetworking\/",
+    "B2D02E102749FD5534DBB5769A77351AB3FB06A9" : "YNSwiftProject\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YNWangWeatherApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YNWangWeatherApp\/YNWangWeatherApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/172.17.34.102\/LaoMoney",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1383498c-bbca-407e-bb69-684b86c5358b++9724"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ynwang2016\/YNWangSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B2D02E102749FD5534DBB5769A77351AB3FB06A9"
+    }
+  ]
+}

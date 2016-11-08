@@ -93,6 +93,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 			return cell
 		}
 		
+		else if indexPath.section == 1 {
+			let indentifier = "cell3"
+			var cell: YNWeatherCell2! = (tableView.dequeueReusableCellWithIdentifier(indentifier) as? YNWeatherCell2)
+			if cell == nil {
+                cell = YNWeatherCell2(style:  .Default, reuseIdentifier: indentifier)
+			}
+			
+			return cell
+		}
+		
 		let indentifer = "cell2"
 		var cell: YNWeatherCell1! = (tableView.dequeueReusableCellWithIdentifier(indentifer) as? YNWeatherCell1)
 		if cell == nil {
@@ -119,11 +129,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	}
 	
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 2
+		return 3
 	}
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		if section == 0 {
+		if section == 0 || section == 1{
 			return 1
 		}
 		return self.listArray.count
@@ -132,6 +142,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 		if indexPath.section == 0 {
 			return 320
+		}
+		else if indexPath.section == 1{
+			return 80
 		}
 		
 		return 44
