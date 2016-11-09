@@ -34,10 +34,9 @@ class YNWeatherCell2: UITableViewCell, UICollectionViewDelegate, UICollectionVie
 	}
 	func setUpViews() {
 
-		let screenBounds:CGRect = UIScreen.mainScreen().bounds
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-		collectView = UICollectionView(frame:CGRectMake(0, 0, screenBounds.size.width, 80), collectionViewLayout:layout)
+		collectView = UICollectionView(frame:CGRectMake(0, 0, SCREEN_WIDTH, 80), collectionViewLayout:layout)
 		collectView!.backgroundColor = UIColor.orangeColor()
 		collectView!.delegate = self
 		collectView!.dataSource = self

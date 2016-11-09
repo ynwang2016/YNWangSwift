@@ -30,6 +30,7 @@
 		3D714BF31DD1492900EAA60E /* YNWeatherCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D714BF21DD1492900EAA60E /* YNWeatherCell2.swift */; };
 		3D714BFA1DD264A700EAA60E /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D714BF81DD264A700EAA60E /* CollectionCell.swift */; };
 		3D714BFB1DD264A700EAA60E /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D714BF91DD264A700EAA60E /* CollectionCell.xib */; };
+		3D714BFE1DD29E9400EAA60E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D714BFD1DD29E9400EAA60E /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		3D714BF21DD1492900EAA60E /* YNWeatherCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNWeatherCell2.swift; sourceTree = "<group>"; };
 		3D714BF81DD264A700EAA60E /* CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		3D714BF91DD264A700EAA60E /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		3D714BFD1DD29E9400EAA60E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		3D5BD99A1DCAB43600F52B74 /* YNWangWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D714BFC1DD29E7A00EAA60E /* Define */,
 				3D5BDA521DCBEBCB00F52B74 /* Modal */,
 				3D5BDA4E1DCBB30700F52B74 /* Extension */,
 				3D5BDA311DCBA8AF00F52B74 /* AFNetworking */,
@@ -225,6 +228,14 @@
 				3D5BDA591DCBED0D00F52B74 /* WeatherObject.swift */,
 			);
 			name = Modal;
+			sourceTree = "<group>";
+		};
+		3D714BFC1DD29E7A00EAA60E /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				3D714BFD1DD29E9400EAA60E /* File.swift */,
+			);
+			name = Define;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 				3D5BDA4C1DCBA8AF00F52B74 /* AFURLResponseSerialization.m in Sources */,
 				3D5BDA5A1DCBED0D00F52B74 /* WeatherObject.swift in Sources */,
 				3D5BDA4A1DCBA8AF00F52B74 /* AFURLConnectionOperation.m in Sources */,
+				3D714BFE1DD29E9400EAA60E /* File.swift in Sources */,
 				3D5BDA491DCBA8AF00F52B74 /* AFSecurityPolicy.m in Sources */,
 				3D714BF31DD1492900EAA60E /* YNWeatherCell2.swift in Sources */,
 				3D5BDA471DCBA8AF00F52B74 /* AFHTTPSessionManager.m in Sources */,

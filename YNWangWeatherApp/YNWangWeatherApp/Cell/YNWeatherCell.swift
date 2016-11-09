@@ -15,6 +15,8 @@ class YNWeatherCell: UITableViewCell {
 	var temperatureLabel: UILabel!
 	var timeLabel: UILabel!
 	var todayLabel: UILabel!
+	let LABELHEIGHT: CGFloat = 30.0
+	let X: CGFloat = 100.0
 	
 	
 	
@@ -35,27 +37,20 @@ class YNWeatherCell: UITableViewCell {
 	
 	func setUpViews() {
 		//1.当地温度
-		//获取屏幕大小
-		let screenBounds:CGRect = UIScreen.mainScreen().bounds
-		print(screenBounds) //iPhone6输出：（0.0,0.0,375.0,667.0）
-		
-		//获取屏幕大小（不包括状态栏高度）
-//		let viewBounds:CGRect = UIScreen.mainScreen().applicationFrame
-//		print(viewBounds) //iPhone6输出：（0.0,20.0,375.0,647.0）
 		self.backgroundColor = UIColor.blueColor()
-		localWeatherLabel = UILabel(frame:CGRect(x:100, y: 50, width: 200, height:50))
-		localWeatherLabel.center = CGPointMake(screenBounds.width / 2, localWeatherLabel.center.y)
+		localWeatherLabel = UILabel(frame:CGRect(x:X, y: X / 2, width: X * 2, height:X / 2))
+		localWeatherLabel.center = CGPointMake(SCREEN_WIDTH / 2, localWeatherLabel.center.y)
 		localWeatherLabel?.text = "当地温度"
 		localWeatherLabel?.textAlignment = NSTextAlignment.Center
 		localWeatherLabel?.textColor = UIColor.whiteColor()
-		localWeatherLabel?.font = UIFont.systemFontOfSize(30)
+		localWeatherLabel?.font = FONT_60
 		self.contentView.addSubview(localWeatherLabel!)
 		
 		//2.大部晴朗
-		weatherLabel = UILabel(frame:CGRect(x: 0, y: CGRectGetMaxY(localWeatherLabel!.frame) + 20, width: 100, height:  30))
+		weatherLabel = UILabel(frame:CGRect(x: 0, y: CGRectGetMaxY(localWeatherLabel!.frame) + 20, width: X, height:  LABELHEIGHT))
 		weatherLabel?.center = CGPointMake((localWeatherLabel?.center.x)!, (weatherLabel?.center.y)!)
 		weatherLabel?.text = "大部晴朗"
-		weatherLabel?.font = UIFont.systemFontOfSize(15)
+		weatherLabel?.font = FONT_30
 		weatherLabel?.textAlignment = NSTextAlignment.Center
 		weatherLabel?.textColor = UIColor.whiteColor()
 		self.contentView.addSubview(weatherLabel!)
@@ -65,22 +60,22 @@ class YNWeatherCell: UITableViewCell {
 		temperatureLabel?.center = CGPointMake((weatherLabel?.center.x)!, (temperatureLabel?.center.y)!)
 		temperatureLabel?.text = "19"
 		temperatureLabel?.textColor = UIColor.whiteColor()
-		temperatureLabel?.font = UIFont.systemFontOfSize(70)
+		temperatureLabel?.font = FONT_140
 		temperatureLabel?.textAlignment = NSTextAlignment.Center
 		self.contentView.addSubview(temperatureLabel!)
 		
 		//4.星期天
-		timeLabel = UILabel(frame:CGRect(x: 10, y: CGRectGetMaxY(temperatureLabel!.frame) + 50, width:50, height:30))
+		timeLabel = UILabel(frame:CGRect(x: 10, y: CGRectGetMaxY(temperatureLabel!.frame) + X / 2, width: X / 2, height:LABELHEIGHT))
 		timeLabel?.textColor = UIColor.whiteColor()
-		timeLabel?.font = UIFont.systemFontOfSize(15)
+		timeLabel?.font = FONT_30
 		timeLabel?.textAlignment = NSTextAlignment.Center
 		timeLabel?.text = "星期三"
 		self.contentView.addSubview(timeLabel!)
 		
 		//5.今天
-		todayLabel = UILabel(frame:CGRect(x: CGRectGetMaxX(timeLabel!.frame) + 10, y: timeLabel!.frame.origin.y, width:40, height:30))
+		todayLabel = UILabel(frame:CGRect(x: CGRectGetMaxX(timeLabel!.frame) + 10, y: timeLabel!.frame.origin.y, width:40, height:LABELHEIGHT))
 		todayLabel?.textColor = UIColor.whiteColor()
-		todayLabel?.font = UIFont.systemFontOfSize(15)
+		todayLabel?.font = FONT_30
 		todayLabel?.textAlignment = NSTextAlignment.Center
 		todayLabel?.text = "今天"
 		self.contentView.addSubview(todayLabel!)

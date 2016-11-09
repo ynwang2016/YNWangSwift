@@ -39,7 +39,8 @@ class YNWeatherCell1: UITableViewCell {
 		self.contentView.addSubview(weekLabel)
 		weekLabel.textAlignment = NSTextAlignment.Center
 		
-		temLabel = UILabel(frame: CGRect(x: self.contentView.frame.size.width - 30, y: weekLabel.frame.origin.y, width: 100, height: 30))
+		let wid = width(self.contentView)
+		temLabel = UILabel(frame: CGRect(x: wid - 30, y: weekLabel.frame.origin.y, width: 100, height: 30))
 		temLabel.textColor = UIColor.whiteColor()
 		temLabel.font = UIFont.systemFontOfSize(15)
 		temLabel.textAlignment = NSTextAlignment.Right
