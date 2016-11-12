@@ -36,47 +36,57 @@ class YNWeatherCell: UITableViewCell {
 	}
 	
 	func setUpViews() {
+//		let helloLabel: UILabel
+//		helloLabel.text = "label"
+//        self.contentView.addSubview(helloLabel)
+//		helloLabel.textColor = UIColor.brown;
+//		helloLabel.font = FONT_30
+//		helloLabel.snp.makeConstraints { (make) -> Void in
+//			make.width.height.equalTo(50)
+//			make.center.equalTo(self.view)
+//		}
+		
 		//1.当地温度
-		self.backgroundColor = UIColor.blueColor()
+		self.backgroundColor = UIColor.blue
 		localWeatherLabel = UILabel(frame:CGRect(x:X, y: X / 2, width: X * 2, height:X / 2))
-		localWeatherLabel.center = CGPointMake(SCREEN_WIDTH / 2, localWeatherLabel.center.y)
+		localWeatherLabel.center = CGPoint(x: SCREEN_WIDTH / 2, y: localWeatherLabel.center.y)
 		localWeatherLabel?.text = "当地温度"
-		localWeatherLabel?.textAlignment = NSTextAlignment.Center
-		localWeatherLabel?.textColor = UIColor.whiteColor()
+		localWeatherLabel?.textAlignment = NSTextAlignment.center
+		localWeatherLabel?.textColor = UIColor.white
 		localWeatherLabel?.font = FONT_60
 		self.contentView.addSubview(localWeatherLabel!)
 		
 		//2.大部晴朗
-		weatherLabel = UILabel(frame:CGRect(x: 0, y: CGRectGetMaxY(localWeatherLabel!.frame) + 20, width: X, height:  LABELHEIGHT))
-		weatherLabel?.center = CGPointMake((localWeatherLabel?.center.x)!, (weatherLabel?.center.y)!)
+		weatherLabel = UILabel(frame:CGRect(x: 0, y: localWeatherLabel!.frame.maxY + 20, width: X, height:  LABELHEIGHT))
+		weatherLabel?.center = CGPoint(x: (localWeatherLabel?.center.x)!, y: (weatherLabel?.center.y)!)
 		weatherLabel?.text = "大部晴朗"
 		weatherLabel?.font = FONT_30
-		weatherLabel?.textAlignment = NSTextAlignment.Center
-		weatherLabel?.textColor = UIColor.whiteColor()
+		weatherLabel?.textAlignment = NSTextAlignment.center
+		weatherLabel?.textColor = UIColor.white
 		self.contentView.addSubview(weatherLabel!)
 		
 		//3.数字温度
-		temperatureLabel = UILabel(frame:CGRect(x: 0, y: CGRectGetMaxY((weatherLabel?.frame)!), width: 90, height: 90))
-		temperatureLabel?.center = CGPointMake((weatherLabel?.center.x)!, (temperatureLabel?.center.y)!)
+		temperatureLabel = UILabel(frame:CGRect(x: 0, y: (weatherLabel?.frame)!.maxY, width: 90, height: 90))
+		temperatureLabel?.center = CGPoint(x: (weatherLabel?.center.x)!, y: (temperatureLabel?.center.y)!)
 		temperatureLabel?.text = "19"
-		temperatureLabel?.textColor = UIColor.whiteColor()
+		temperatureLabel?.textColor = UIColor.white
 		temperatureLabel?.font = FONT_140
-		temperatureLabel?.textAlignment = NSTextAlignment.Center
+		temperatureLabel?.textAlignment = NSTextAlignment.center
 		self.contentView.addSubview(temperatureLabel!)
 		
 		//4.星期天
-		timeLabel = UILabel(frame:CGRect(x: 10, y: CGRectGetMaxY(temperatureLabel!.frame) + X / 2, width: X / 2, height:LABELHEIGHT))
-		timeLabel?.textColor = UIColor.whiteColor()
+		timeLabel = UILabel(frame:CGRect(x: 10, y: temperatureLabel!.frame.maxY + X / 2, width: X / 2, height:LABELHEIGHT))
+		timeLabel?.textColor = UIColor.white
 		timeLabel?.font = FONT_30
-		timeLabel?.textAlignment = NSTextAlignment.Center
+		timeLabel?.textAlignment = NSTextAlignment.center
 		timeLabel?.text = "星期三"
 		self.contentView.addSubview(timeLabel!)
 		
 		//5.今天
-		todayLabel = UILabel(frame:CGRect(x: CGRectGetMaxX(timeLabel!.frame) + 10, y: timeLabel!.frame.origin.y, width:40, height:LABELHEIGHT))
-		todayLabel?.textColor = UIColor.whiteColor()
+		todayLabel = UILabel(frame:CGRect(x: timeLabel!.frame.maxX + 10, y: timeLabel!.frame.origin.y, width:40, height:LABELHEIGHT))
+		todayLabel?.textColor = UIColor.white
 		todayLabel?.font = FONT_30
-		todayLabel?.textAlignment = NSTextAlignment.Center
+		todayLabel?.textAlignment = NSTextAlignment.center
 		todayLabel?.text = "今天"
 		self.contentView.addSubview(todayLabel!)
 	}
@@ -85,7 +95,7 @@ class YNWeatherCell: UITableViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

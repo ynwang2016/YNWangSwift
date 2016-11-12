@@ -20,7 +20,7 @@ class WeatherObject {
 		self.dayTime = dayTime
 	}
 	
-	func initWeather(week: String, temperature: String, dayTime: String) -> WeatherObject {
+	func initWeather(_ week: String, temperature: String, dayTime: String) -> WeatherObject {
 		self.week = week
 		self.temperature = temperature
 		self.dayTime = dayTime

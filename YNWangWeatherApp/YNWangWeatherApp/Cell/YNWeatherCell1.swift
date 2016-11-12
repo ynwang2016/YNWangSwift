@@ -32,27 +32,27 @@ class YNWeatherCell1: UITableViewCell {
 	}
 	
 	func setUpViews() {
-		self.contentView.backgroundColor = UIColor.redColor()
+		self.contentView.backgroundColor = UIColor.red
 		weekLabel = UILabel(frame: CGRect(x: 10, y: 10, width: 50, height: 30))
-		weekLabel.textColor = UIColor.whiteColor()
-		weekLabel.font = UIFont.systemFontOfSize(15)
+		weekLabel.textColor = UIColor.white
+		weekLabel.font = UIFont.systemFont(ofSize: 15)
 		self.contentView.addSubview(weekLabel)
-		weekLabel.textAlignment = NSTextAlignment.Center
+		weekLabel.textAlignment = NSTextAlignment.center
 		
 		let wid = width(self.contentView)
 		temLabel = UILabel(frame: CGRect(x: wid - 30, y: weekLabel.frame.origin.y, width: 100, height: 30))
-		temLabel.textColor = UIColor.whiteColor()
-		temLabel.font = UIFont.systemFontOfSize(15)
-		temLabel.textAlignment = NSTextAlignment.Right
+		temLabel.textColor = UIColor.white
+		temLabel.font = UIFont.systemFont(ofSize: 15)
+		temLabel.textAlignment = NSTextAlignment.right
 		self.contentView.addSubview(temLabel)
 		
-		imageIcon = UIImageView(frame:CGRect(x: CGRectGetMaxX(weekLabel.frame) + 130, y: weekLabel.frame.origin.y, width: 30, height: 30))
+		imageIcon = UIImageView(frame:CGRect(x: weekLabel.frame.maxX + 130, y: weekLabel.frame.origin.y, width: 30, height: 30))
 		imageIcon.image = UIImage(named: "sunny")
-		imageIcon.contentMode = UIViewContentMode.ScaleAspectFit
+		imageIcon.contentMode = UIViewContentMode.scaleAspectFit
 		self.contentView.addSubview(imageIcon)
 	}
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
